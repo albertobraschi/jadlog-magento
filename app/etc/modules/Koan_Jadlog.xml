@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Koan_Jadlog>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Koan_Jadlog>
+    </modules>
+</config>

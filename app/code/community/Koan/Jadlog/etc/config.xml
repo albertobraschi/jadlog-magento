@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Koan_Jadlog>
+            <version>1.5.0</version>
+        </Koan_Jadlog>
+    </modules>
+    <global>
+        <models>
+            <koan_jadlog>
+                <class>Koan_Jadlog_Model</class>
+            </koan_jadlog>
+        </models>
+        <resources>
+            <koan_jadlog_setup>
+                <setup>
+                    <module>Koan_Jadlog</module>
+                	<class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </koan_jadlog_setup>
+        </resources>
+        <sales>
+            <shipping>
+                <carriers>
+                    <koan_jadlog>
+                        <class>Koan_Jadlog_Model_Carrier_Jadlog</class>
+                    </koan_jadlog>
+                </carriers>
+            </shipping>
+            <quote>
+                <item>
+                    <product_attributes>
+                        <volume_altura/>
+                        <volume_comprimento/>
+                        <volume_largura/>
+                    </product_attributes>
+                </item>
+            </quote>
+        </sales>
+    </global>
+    <default>
+        <carriers>
+            <koan_jadlog>
+                <active>0</active>
+                <sallowspecific>0</sallowspecific>
+                <model>Koan_Jadlog_Model_Carrier_Jadlog</model>
+                <name>Koan_Jadlog</name>
+                <title>Jadlog Transportadora</title>
+                <specificerrmsg>
+                    This shipping method is currently unavailable.
+                    If you would like to ship using this shipping
+                    method, please contact us.
+                </specificerrmsg>
+            </koan_jadlog>
+        </carriers>
+    </default>
+</config>

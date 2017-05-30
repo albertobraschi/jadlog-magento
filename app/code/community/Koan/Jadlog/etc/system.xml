@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <carriers>
+            <groups>
+                <koan_jadlog translate="label" module="shipping">
+                    <label>Jadlog Transportadora</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Habilitar Módulo</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+
+                        <servicos translate="label">
+                            <label>Utilizar</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>Koan_Jadlog_Model_Source_Servicos</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </servicos>
+
+                        <cnpj_contrante traslate="label">
+                            <label>Código Administrativo</label>
+                            <validate>required-entry</validate>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                CNPJ da empresa contrante na Jadlog.
+                            </comment>
+                        </cnpj_contrante>
+
+                        <senha_contrante traslate="label">
+                            <label>Senha</label>
+                            <validate>required-entry</validate>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                A senha da empresa contrante na Jadlog.
+                            </comment>
+                        </senha_contrante>
+
+                        <seguro translate="label">
+                            <label>Tipo do Seguro</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Koan_Jadlog_Model_Source_Seguro</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                Tipo do Seguro: N = normal ― A = apólice própria
+                            </comment>
+                        </seguro>
+
+                        <valor_coleta translate="label">
+                            <label>Valor da coleta negociado com a unidade JADLOG</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                Para valores fracionados use pontos ao invés de vírgula
+                                e não adicione símbolos. Ex.: 2.99
+                            </comment>
+                        </valor_coleta>
+
+                        <frete_apagar translate="label">
+                            <label>Frete a pagar no destino</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Koan_Jadlog_Model_Source_PagarDestino</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </frete_apagar>
+
+                        <entrega translate="label">
+                            <label>Tipo de entrega </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Koan_Jadlog_Model_Source_Entrega</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                Tipo de entrega: ― R = retira unidade JADLOG ― D = domicilio.
+                            </comment>
+                        </entrega>
+
+                        <taxa_adicional translate="label">
+                            <label>Taxa Adicional</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                Para valores fracionados use pontos ao invés de vírgula
+                                e não adicione símbolos. Ex.: 2.99
+                            </comment>
+                        </taxa_adicional>
+
+                        <tipo_taxa_adicional>
+                            <label>Tipo de taxa adicional</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Koan_Jadlog_Model_Source_Taxas</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tipo_taxa_adicional>
+
+                    </fields>
+                </koan_jadlog>
+            </groups>
+        </carriers>
+    </sections>
+</config>
